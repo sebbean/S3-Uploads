@@ -184,6 +184,7 @@ class S3_Uploads {
 		}
 
 		file_put_contents("php://stderr", print_r($params, TRUE));
+		file_put_contents("php://stderr", print_r(debug_backtrace(), TRUE));
 
 		$params   = apply_filters( 's3_uploads_s3_client_params', $params );
 		$this->s3 = Aws\S3\S3Client::factory( $params );
