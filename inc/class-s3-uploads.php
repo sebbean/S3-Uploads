@@ -184,6 +184,7 @@ class S3_Uploads {
 		}
 
 		$params   = apply_filters( 's3_uploads_s3_client_params', $params );
+		print_r(params);
 		$this->s3 = Aws\S3\S3Client::factory( $params );
 
 		return $this->s3;
